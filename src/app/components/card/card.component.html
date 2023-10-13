@@ -1,0 +1,21 @@
+<div class="speech-demo mt-5">
+    <h1>Web Speech API Demonstration</h1>
+    <p>Click on the microphone icon and begin speaking for as long as you like.</p>
+
+    <div class="language">
+      <div>
+        <label for="language">Language:</label>
+        <select id="language" [ngModel]="selectedOption.value" (change)="onSelectChange($event)">
+          <ng-container *ngFor="let option of options">
+            <option value="{{option.value}}">{{option.label}}</option>
+          </ng-container>
+        </select>
+      </div>
+      <div class="microphone" [ngClass]="{ 'listening':this.isRecognizing}" (click)="onMicrophoneClick()">
+        <i class="bi bi-mic-fill icon"></i>
+      </div>
+    </div>
+    <div class="transcript">
+      <textarea #myTextarea readonly></textarea>
+    </div>
+  </div>
