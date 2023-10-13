@@ -44,6 +44,9 @@ Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+#ignore node modules
+/node_modules/
+/.angular
 # NUnit
 *.VisualState.xml
 TestResult.xml
